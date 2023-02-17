@@ -4,7 +4,13 @@ var connectionUserCount = new signalR.HubConnectionBuilder()
 
 //connect to methods that hub invokes aka receive notfications from hub
 connectionUserCount.on("UpdateTotalViews", (value) => {
-    var newCountSpan = document.getElementById("totalViewsCount");
+    var newCountSpan = document.getElementById("totalViewsCounter");
+    newCountSpan.innerText = value.toString();
+});
+
+
+connectionUserCount.on("UpdateTotalUsers", (value) => {
+    var newCountSpan = document.getElementById("totalUsersCounter");
     newCountSpan.innerText = value.toString();
 });
 
