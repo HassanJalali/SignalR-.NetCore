@@ -26,10 +26,11 @@ namespace SignalRSample.Hubs
 
 
         // called whenever page loaded or reload
-        public async Task NewWindowLoaded()
+        public async Task<string> NewWindowLoaded()
         {
             TotalViews++;
             await Clients.All.SendAsync("UpdateTotalViews", TotalViews);
+            return $"Total Views - {TotalViews}";
         }
 
     }
