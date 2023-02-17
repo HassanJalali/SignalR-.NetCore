@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "2rdgL5qeKXbGxMVQqgYU6oh3C7CPWgZ5ryBdK/KHy2A=",
+  "Hash": "ZS036s0Lf/EVMPJ0O78yuMozQlwjCV7E6+dNNa4MrxY=",
   "Source": "SignalRSample",
   "BasePath": "_content/SignalRSample",
   "Mode": "Default",
@@ -1105,6 +1105,23 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "C:\\Users\\macbook\\Desktop\\SignalR-.NetCore\\SignalRSample\\SignalRSample\\wwwroot\\js\\signalr.js",
+      "SourceId": "SignalRSample",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\macbook\\Desktop\\SignalR-.NetCore\\SignalRSample\\SignalRSample\\wwwroot\\",
+      "BasePath": "_content/SignalRSample",
+      "RelativePath": "js/signalr.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\signalr.js"
+    },
+    {
       "Identity": "C:\\Users\\macbook\\Desktop\\SignalR-.NetCore\\SignalRSample\\SignalRSample\\wwwroot\\js\\site.js",
       "SourceId": "SignalRSample",
       "SourceType": "Discovered",
@@ -1120,6 +1137,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
+    },
+    {
+      "Identity": "C:\\Users\\macbook\\Desktop\\SignalR-.NetCore\\SignalRSample\\SignalRSample\\wwwroot\\js\\userCount.js",
+      "SourceId": "SignalRSample",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\macbook\\Desktop\\SignalR-.NetCore\\SignalRSample\\SignalRSample\\wwwroot\\",
+      "BasePath": "_content/SignalRSample",
+      "RelativePath": "js/userCount.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\userCount.js"
     },
     {
       "Identity": "C:\\Users\\macbook\\Desktop\\SignalR-.NetCore\\SignalRSample\\SignalRSample\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
