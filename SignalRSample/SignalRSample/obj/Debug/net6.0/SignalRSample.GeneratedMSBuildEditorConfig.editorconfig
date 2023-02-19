@@ -19,6 +19,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/macbook/Desktop/SignalR-.NetCore/SignalRSample/SignalRSample/Views/Home/BasicChat.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxCYXNpY0NoYXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/macbook/Desktop/SignalR-.NetCore/SignalRSample/SignalRSample/Views/Home/DeathlyHallowRace.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEZWF0aGx5SGFsbG93UmFjZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
