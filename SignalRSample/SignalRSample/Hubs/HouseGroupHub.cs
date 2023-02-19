@@ -25,6 +25,7 @@ namespace SignalRSample.Hubs
                 }
 
                 await Clients.Caller.SendAsync("subscriptionStatus", houseList, houseName.ToLower(), true);
+                await Clients.Others.SendAsync("newMemberAddedToHouse", houseName);
                 await Groups.AddToGroupAsync(Context.ConnectionId, houseName);
             }
 
@@ -45,15 +46,15 @@ namespace SignalRSample.Hubs
                     }
                 }
                 await Clients.Caller.SendAsync("subscriptionStatus", houseList, houseName.ToLower(), false);
+                //other than the caller
+                await Clients.Others.SendAsync("newMemberRemovedToHouse", houseName);
                 await Groups.RemoveFromGroupAsync(Context.ConnectionId, houseName);
             }
-
-           
-
         }
-        public async Task TellConnection()
+
+        public async Task TriggerHouseNotify(string houseName)
         {
-            await Clients.
+            await Clients.Group(houseName).SendAsync("TriggerHouseNotification", houseName);
         }
     }
 }
