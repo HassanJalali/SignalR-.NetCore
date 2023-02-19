@@ -1,33 +1,48 @@
-﻿//create connection to our signalR hub with the given route
-/*.configureLogging(signalR.LogLevel.debug)*/
-var connectionUserCount = new signalR.HubConnectionBuilder()
-    .withUrl("/hubs/userCount").build();
+﻿var connectionBasicChat = new signalR.HubConnectionBuilder()
+    .withUrl("/hubs/basicchathub").build();
 
-//connect to methods that hub invokes aka receive notfications from hub
-connectionUserCount.on("UpdateTotalViews", (value) => {
-    var newCountSpan = document.getElementById("totalViewsCounter");
-    newCountSpan.innerText = value.toString();
+document.getElementById("sendMessage").disabled = true;
+
+
+connectionBasicChat.on("MessageRecieved", function (sender, message) {
+    var li = document.createElement("li");
+    document.getElementById("messagesList").appendChild(li);
+    li.textContent = `${sender} - ${message}`;
+    toastr.success(`You have recieved a message from ${sender}`);
+});
+
+document.getElementById("sendMessage").addEventListener("click", function (event) {
+    var sender = document.getElementById("senderEmail").value;
+    var receiver = document.getElementById("receiverEmail").value;
+    var message = document.getElementById("chatMessage").value;
+    if (receiver.length > 0) {
+        connectionBasicChat.send("SendMessageToPrivate", sender, receiver, message).then(function () {
+            document.getElementById("chatMessage").value = "";
+        }).catch(function (err) {
+            return console.error(err.toString());
+        });
+    }
+    else {
+        connectionBasicChat.send("SendMessageToAll", sender, message).then(function () {
+            document.getElementById("chatMessage").value = "";
+            
+        }).catch(function (err) {
+            return console.error(err.toString());
+        });
+    }
+
+    event.preventDefault();
 });
 
 
-connectionUserCount.on("UpdateTotalUsers", (value) => {
-    var newCountSpan = document.getElementById("totalUsersCounter");
-    newCountSpan.innerText = value.toString();
-});
 
-//invoke hub methods aka send notification to hub
-function newWindowLoadedOnClient() {
-    connectionUserCount.invoke("NewWindowLoaded").then((value) => console.log(value));
-}
-
-//start connection
 function fulfilled() {
-    //do something on start
     console.log("Connection to User Hub Successful");
-    newWindowLoadedOnClient();
-}
-function rejected() {
-    //rejected logs
+    connectionBasicChat.send("");
+    document.getElementById("sendMessage").disabled = false;
 }
 
-connectionUserCount.start().then(fulfilled, rejected);
+function rejected() {
+}
+
+connectionBasicChat.start().then(fulfilled, rejected);
