@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "t+hsvJ21ronRAqMqJplR5j/BbZjLK2zOOqbu/mSx5aU=",
+  "Hash": "d8VkHT+OhbRwg2TfMvPLg2xxoVujVncKEefhnUdx8yc=",
   "Source": "SignalRSample",
   "BasePath": "_content/SignalRSample",
   "Mode": "Default",
@@ -1120,6 +1120,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\DealthyHallows.js"
+    },
+    {
+      "Identity": "C:\\Users\\macbook\\Desktop\\SignalR-.NetCore\\SignalRSample\\SignalRSample\\wwwroot\\js\\HouseGroup.js",
+      "SourceId": "SignalRSample",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\macbook\\Desktop\\SignalR-.NetCore\\SignalRSample\\SignalRSample\\wwwroot\\",
+      "BasePath": "_content/SignalRSample",
+      "RelativePath": "js/HouseGroup.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\HouseGroup.js"
     },
     {
       "Identity": "C:\\Users\\macbook\\Desktop\\SignalR-.NetCore\\SignalRSample\\SignalRSample\\wwwroot\\js\\signalr.js",

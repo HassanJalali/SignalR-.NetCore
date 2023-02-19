@@ -1,7 +1,7 @@
 ﻿//create connection to our signalR hub with the given route
 /*.configureLogging(signalR.LogLevel.debug)*/
 var connectionUserCount = new signalR.HubConnectionBuilder()
-    .withUrl("/hubs/userCount", signalR.HttpTransportType.WebSockets).build();
+    .withUrl("/hubs/userCount").build();
 
 //connect to methods that hub invokes aka receive notfications from hub
 connectionUserCount.on("UpdateTotalViews", (value) => {
