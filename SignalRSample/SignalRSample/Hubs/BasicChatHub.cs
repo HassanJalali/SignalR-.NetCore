@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.SignalR;
 using SignalRSample.Data;
 using System.Reflection;
@@ -15,6 +16,7 @@ namespace SignalRSample.Hubs
         }
         public static List<string> messageList = new List<string>();
 
+        [Authorize]
         public async Task SendMessageToAll(string sender, string message)
         {
             if (!string.IsNullOrWhiteSpace(message))
@@ -24,6 +26,7 @@ namespace SignalRSample.Hubs
             }
         }
 
+        [Authorize]
         public async Task SendMessageToPrivate(string sender, string Reciever, string message)
         {
             bool loginUser = _context.UserLogins.Any(u => u.UserId == Reciever);
